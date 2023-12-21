@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Concurso</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="content">
+                <form>
+                    <h1>Programa Concurso</h1>
+                    <p> Candidato:
+                        <input type="text" name="icandidato" id="icandidato" placeholder="Set Person" required autofocus>
+                    </p>
+                    <p> Nº de Acertos
+                        <input type="number" name="inum" id="inum" min="0" required>
+                        <input class="btn" id="btAdicionar" type="submit" value="Adicionar">
+                    </p>
+
+                    <input class="btn" id="btListar" type="button" value="Listar Todos">
+                    <input class="btn" id="btAprovados" type="button" value="Aprovados 2ª Etapa">
+                </form>
+            </div>
+            
+            <hr>
+            <pre></pre>
+            <h3></h3>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

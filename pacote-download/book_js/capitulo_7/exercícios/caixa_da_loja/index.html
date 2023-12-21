@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Caixa da Loja</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="content">
+                <form>
+                    <h1>Programa Caixa da Loja</h1>
+                    <p> Data de Vencimento:
+                        <input type="date" name="inDataVenc" id="inDataVenc" placeholder="Set Date" required autofocus>
+                    </p>
+
+                    <p> Valor da Conta R$: 
+                        <input type="number" name="ivalor" id="ivalor" min="0" step="0.01" required>
+                        <input class="btn" type="submit" value="Calcular Multa e Juros">
+                    </p>
+
+                    <p> Valor da Multa R$:
+                        <input type="number" name="imulta" id="imulta" placeholder="conta * 0.02" readonly>
+                    </p>
+
+                    <p> Valor do Juros R$:
+                        <input style="width: 170px" type="number" name="ijuros" id="ijuros" placeholder="conta * 0.33 * dia atraso" readonly>
+                    </p>
+
+                    <p> Total a Pagar R$:
+                        <input type="number" name="itotal" id="itotal" readonly>
+                        <input type="reset" class="btn" value="Nova Conta">
+                    </p>
+                </form>
+            </div>
+            
+            <hr>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

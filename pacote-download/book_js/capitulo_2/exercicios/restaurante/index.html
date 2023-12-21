@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cinema</title>
+</head>
+<body>
+    <form action="" method="get">
+        <h1>Restaurante JS</h1>
+        <p>
+            <label for="inKilo">Buffet por Kg: </label>
+            <input type="text" name="inKilo" id="inKilo" min="0" step="0.01" required>
+        </p>
+        <p>
+            <label for="inGrama">Consumo do cliente (gr): </label>
+            <input type="number" name="inGrama" id="inGrama" min="0" required>
+        </p>
+        <input type="submit" value="Calcular preço">
+        <p id="resp"></p>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>

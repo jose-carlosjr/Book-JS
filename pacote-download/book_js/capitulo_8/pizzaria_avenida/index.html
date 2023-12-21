@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Revenda Avenida</title>
+    <style>
+        section {
+            width: 600px
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="content">
+                <form>
+                    <h1>Pizzaria Avenida - Controle de Pedidos</h1>
+                    <p> Item do Pedido:
+                        <input type="radio" name="produto" id="rbPizza" checked> Pizza
+                        <input type="radio" name="produto" id="rbBebida"> Bebida
+
+                        <span style="margin-left: 100px">Item:</span>
+                        <select name="inPizza" id="inPizza">
+                            <option value="media">Pizza Media</option>
+                            <option value="grande">Pizza Grande</option>
+                            <option value="familia">Pizza Família</option>
+                        </select>
+
+                        <select class="oculta" name="inBebida" id="inBebida">
+                            <option value="refri">Refrigerante Litro</option>
+                            <option value="suco">Jarra de Suco</option>
+                            <option value="agua">Água Mineral</option>
+                        </select>
+                    </p>
+                    <p> Detalhes do Item:
+                        <input style="width: 300px" class="detalhe" type="text" name="idetalhe" id="idetalhe">
+                        <input type="submit" class="btn" value="Adicionar">
+                        <input type="button" class="btn" value="Limpar">
+                    </p>
+                </form>
+            </div>
+            <hr>
+            <pre></pre>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
