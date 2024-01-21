@@ -68,3 +68,24 @@ frm.btRetirar.addEventListener('click', () => {
     }
 })
 
+frm.btGravar.addEventListener('click', () => {
+    const tarefas = document.querySelectorAll('h5')
+
+    if (tarefas.length == 0) {
+        alert ('Não há tarefas para serem salvas')
+        return
+    }
+
+    let dados = '' // IRÁ ACUMULAR OS DADOS A SEREM SALVOS
+    tarefas.forEach(tarefa => {
+        dados += tarefa.innerText + '; '
+    })
+
+    // GRAVA OS DADOS EM LOCAL STORAGE, REMOVENDO O ÚLTIMO ';'
+    localStorage.setItem('tarefasDia', dados.slice(0, -2))
+
+    //CONFERE SE DADOS FORAM ARMAZENADOS EM LOCAL STORAGE
+    if (localStorage.getItem('tarefasDia')) {
+        alert('Dados salvos com sucesso!')
+    }
+})
