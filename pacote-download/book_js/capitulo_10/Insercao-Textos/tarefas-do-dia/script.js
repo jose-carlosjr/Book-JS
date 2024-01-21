@@ -89,3 +89,19 @@ frm.btGravar.addEventListener('click', () => {
         alert('Dados salvos com sucesso!')
     }
 })
+
+window.addEventListener('load', () => {
+    // VERIFICA SE HÁ TAREFAS SALVAS NO NAVEGADOR DO USUÁRIO
+    if (localStorage.getItem('tarefasDia')) {
+        // CRIA UM VETOR COM A LISTA DE TAREFAS (SEPARADAS PELO SPLIT)
+        const dados = localStorage.getItem('tarefasDia').split(';')
+
+        // PERCORRE OS DADOS ARMAZENADOS EM LOCALSTORAGE
+        dados.forEach(dado => {
+            const h5 = document.createElement('h5')
+            const texto = document.createTextNode(dado)
+            h5.appendChild(texto)
+            dvQuadro.appendChild(h5)
+        })
+    }
+})
