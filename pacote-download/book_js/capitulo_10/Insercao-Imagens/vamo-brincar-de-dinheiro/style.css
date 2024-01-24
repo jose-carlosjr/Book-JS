@@ -11,3 +11,27 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+img.moeda1-00 {
+    height: 84px;
+    width: 84px;
+    margin: 5px 0;
+}
+
+img.moeda0-50 {
+    height: 84px;
+    width: 84px;
+    margin: 5px 0;
+}
+
+img.moeda0-25 {
+    height: 84px;
+    width: 84px;
+    margin: 5px 0;
+}
+
+img.moeda0-10 {
+    height: 84px;
+    width: 84px;
+    margin: 5px 0;
+}
