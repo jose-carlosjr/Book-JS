@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <title>Meus Filmes Favoritos</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <!--<img src="#" alt="Filmes" class="img-fluid">-->
+            </div>
+            <div class="col-sm-8">
+                <h1><u>Meus Filmes Favoritos</u></h1>
+                <form action="">
+                    <p>
+                        <label for="inTitulo">Título do Filme:</label>
+                        <input type="text" class="form-control" id="inTitulo" required autofocus>
+                    </p>
+                    <p>
+                        <label for="inGenero">Gênero:</label>
+                        <input type="text" class="form-control" id="inGenero" required>
+                    </p>
+
+                    <input type="submit" class="btn btn-primary float-right mb-3" value="Adicionar">
+                </form>
+                <hr>
+
+                <table class="table table-striped">
+                    <tr>
+                        <th>Título do Filme</th>
+                        <th>Gênero</th>
+                        <th>Ações</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
