@@ -63,9 +63,11 @@ frm.addEventListener('submit', (e) => {
     if (soma == totalMoedas.toFixed(2)) {
         div.className = 'alert alert-succes'
         mensagem = 'Parabéns! Você acertou!'
+        h3.style.color = 'green'
     } else {
         div.className = 'alert alert-danger'
-        mensagem = `Ops! A resposta correta é: ${totalMoedas.toFixed(2)}`
+        mensagem = `Ops! A resposta correta é: R$ ${totalMoedas.toFixed(2)}`
+        h3.style.color ='red'
     }
 
     const texto = document.createTextNode(mensagem)
@@ -74,4 +76,9 @@ frm.addEventListener('submit', (e) => {
     dvMoedas.appendChild(div)
 
     frm.submit.disabled = true // DESABILITA BOTÃO (RESPOSTA JÁ FOI CONCLUÍDA)
+
+})
+
+frm.addEventListener('reset', () => {
+    window.location.reload()
 })
