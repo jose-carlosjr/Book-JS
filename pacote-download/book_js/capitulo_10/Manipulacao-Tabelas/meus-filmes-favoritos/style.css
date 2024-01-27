@@ -10,6 +10,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fff;
+}
+
+.container-fluid {
+    border: 3px solid #0c0962;
+    border-radius: 10px;
+    padding: 30px;
+    background-color: #0c0962;
+}
+
+.row {
+    border: 3px solid #0c0962;
+    border-radius: 10px;
+    padding: 30px;
     background-color: #c3c3c3;
 }
 
@@ -40,7 +54,7 @@ label {
 }
 
 hr {
-    margin: 10px;
+    margin: 10px 0;
     height: 5px;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.833);
@@ -53,4 +67,18 @@ hr {
     text-align: center;
     border-collapse: collapse;
     border: 1px solid black;
+}
+
+th, tr, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+th {
+    background-color: #0c0962;
+    color: white;
+}
+
+.exclui {
+    color: red;
 }

@@ -15,7 +15,8 @@ frm.addEventListener('submit', (e) => {
 })
 
 const inserirLinha = (titulo, genero) => {
-    const linha = tbFilmes.insertRow(-1) // ADICIONA UMA LINHA NA TABELA
+    // ADICIONA UMA LINHA NA TABELA. (-1) INSERE A LINHA NO FINAL DA TABELA
+    const linha = tbFilmes.insertRow(-1)
 
     // CRIA COLUNAS NA LINHA INSERIDA
     const col1 = linha.insertCell(0)
