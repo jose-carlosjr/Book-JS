@@ -74,6 +74,10 @@ th, tr, td {
     padding: 5px;
 }
 
+tr:nth-child(2n+2) {
+    background-color: #9f9f9f;
+}
+
 th {
     background-color: #0c0962;
     color: white;
@@ -81,4 +85,5 @@ th {
 
 .exclui {
     color: red;
+    cursor: pointer;
 }
