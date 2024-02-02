@@ -34,11 +34,15 @@ p {
     color: white;
 }
 
+span {
+    font-size: 3em;
+}
+
 .form {
     width: 100%;
 }
 
-.form p > input {
+.form p > .idade {
     width: 80%;
 }
 
@@ -48,4 +52,5 @@ p {
     border: none;
     padding: 10px;
     border-radius: 5px;
+    margin-top: 2%;
 }
