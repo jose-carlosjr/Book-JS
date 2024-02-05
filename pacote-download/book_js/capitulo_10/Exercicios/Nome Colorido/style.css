@@ -42,8 +42,8 @@ span {
     width: 100%;
 }
 
-.form p > .idade {
-    width: 80%;
+.form p > .nome {
+    width: 70%;
 }
 
 .btn {
