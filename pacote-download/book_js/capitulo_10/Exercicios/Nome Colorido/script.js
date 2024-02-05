@@ -5,14 +5,19 @@ frm.addEventListener('submit', (event) => {
 
     const nome = frm.inNome.value
     const div = document.createElement('div')
-    const h3 = document.createElement('h3')
+    div.className = 'res'
 
     const nomes = nome.split(' ')
     console.log(nomes)
 
+    const color = ['blue', 'red', 'green', 'magenta', 'orange', 'purple']
+
     for (let i = 0; i < nomes.length; i++) {
-        let text = document.createTextNode(nomes[i])
-        h3.appendChild(text)
-        div.appendChild(h3)
+        const randomColor = Math.floor(Math.random() * 6)
+        let text = nomes[i]
+        div.innerHTML += `<h3>${text}</h3>`
+        div.style.color = color[randomColor]
     }
+
+    frm.appendChild(div)
 })
