@@ -15,8 +15,7 @@ frm.addEventListener('submit', (event) => {
     for (let i = 0; i < nomes.length; i++) {
         const randomColor = Math.floor(Math.random() * 6)
         let text = nomes[i]
-        div.innerHTML += `<h3>${text}</h3>`
-        div.style.color = color[randomColor]
+        div.innerHTML += `<h3 style='color:${color[randomColor]};'>${text}</h3>`
     }
 
     frm.appendChild(div)
