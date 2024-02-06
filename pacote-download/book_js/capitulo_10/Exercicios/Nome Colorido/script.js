@@ -1,4 +1,5 @@
 const frm = document.querySelector('.form')
+const deleteDiv = document.querySelector('.res')
 
 frm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -16,6 +17,7 @@ frm.addEventListener('submit', (event) => {
         const randomColor = Math.floor(Math.random() * 6)
         let text = nomes[i]
         div.innerHTML += `<h3 style='color:${color[randomColor]};'>${text}</h3>`
+        color.slice(randomColor, )
     }
 
     frm.appendChild(div)
