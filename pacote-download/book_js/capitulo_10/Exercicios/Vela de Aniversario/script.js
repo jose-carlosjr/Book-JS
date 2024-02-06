@@ -10,11 +10,15 @@ frm.addEventListener('submit', (event) => {
     container.appendChild(div)
 
     for (let i = 0; i < idade.length; i++) {
-        const n = idade.charAt(i)
-        div.innerHTML += `<img src='img/${n}.jpg' class='image'>`
+        if (idade.length <= 3) {
+            const n = idade.charAt(i)
+            div.innerHTML += `<img src='img/${n}.jpg' class='image'>`
+        }
     }
 
-    console.log(idade)
+    if (idade.length > 3) {
+        alert(`Impossível sua idade ser ${idade}`)
+    }
 })
 
 /*
