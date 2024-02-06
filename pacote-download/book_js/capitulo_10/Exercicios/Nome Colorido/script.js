@@ -1,5 +1,6 @@
 const frm = document.querySelector('.form')
-const deleteDiv = document.querySelector('.res')
+const container = document.querySelector('.container')
+const div = document.querySelector('.res')
 
 frm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -8,10 +9,15 @@ frm.addEventListener('submit', (event) => {
     const div = document.createElement('div')
     div.className = 'res'
 
+    // NÃO ESTÁ FUNCIONANDO AINDA
+    if (document.contains(div)) {
+        div.remove()
+    }
+
     const nomes = nome.split(' ')
     console.log(nomes)
 
-    const color = ['blue', 'red', 'green', 'magenta', 'orange', 'purple']
+    const color = ['blue', 'red', 'green', 'magenta', 'orange', 'purple', 'yellow', 'grey', 'brown', 'aqua']
 
     for (let i = 0; i < nomes.length; i++) {
         const randomColor = Math.floor(Math.random() * 6)
@@ -20,5 +26,11 @@ frm.addEventListener('submit', (event) => {
         color.splice(randomColor, 1)
     }
 
-    frm.appendChild(div)
+    container.appendChild(div)
 })
+
+function deleteDiv() {
+    if (div) {
+        div.remove()
+    }
+}
