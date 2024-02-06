@@ -38,6 +38,12 @@ span {
     font-size: 3em;
 }
 
+.image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
 .form {
     width: 100%;
 }

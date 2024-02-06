@@ -7,14 +7,11 @@ frm.addEventListener('submit', (event) => {
     const idade = frm.inIdade.value
 
     const div = document.createElement('div')
-    const span = document.createElement('span')
+    container.appendChild(div)
 
     for (let i = 0; i < idade.length; i++) {
         const n = idade.charAt(i)
-        container.appendChild(div)
-        div.appendChild(span)
-        const texto = document.createTextNode(n)
-        span.appendChild(texto)
+        div.innerHTML += `<img src='img/${n}.jpg' class='image'>`
     }
 
     console.log(idade)
