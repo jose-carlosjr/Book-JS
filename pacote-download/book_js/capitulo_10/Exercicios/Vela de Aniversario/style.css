@@ -53,6 +53,16 @@ span {
     width: 80%;
 }
 
+.res {
+    margin-top: 10%;
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f1ed;
+}
+
 .btn {
     color: white;
     background-color: black;

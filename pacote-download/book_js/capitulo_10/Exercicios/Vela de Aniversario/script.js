@@ -1,22 +1,28 @@
 const container = document.querySelector('.container')
 const frm = document.querySelector('.form')
+let deleteDivRes = document.querySelector('.res')
 
 frm.addEventListener('submit', (event) => {
     event.preventDefault()
 
+    if (deleteDivRes) {
+        deleteDivRes.remove()
+    }
+
     const idade = frm.inIdade.value
 
     const div = document.createElement('div')
+    div.className = 'res'
     container.appendChild(div)
 
     for (let i = 0; i < idade.length; i++) {
-        if (idade.length <= 3) {
+        if (idade <= 120) {
             const n = idade.charAt(i)
-            div.innerHTML += `<img src='img/${n}.jpg' class='image'>`
+            div.innerHTML += `<img src='img/${n}.png' class='image'>`
         }
     }
 
-    if (idade.length > 3) {
+    if (idade > 120) {
         alert(`Impossível sua idade ser ${idade}`)
     }
 })
