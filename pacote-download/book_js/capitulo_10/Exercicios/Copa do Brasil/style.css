@@ -66,7 +66,10 @@ span {
 
 .tabela {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     width: 100%;
     height: 100%;
     padding: 8px;
@@ -78,6 +81,16 @@ span {
 table {
     padding: 10px;
     border: 1px solid black;
+    border-collapse: collapse;
+}
+
+tr, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+tr:nth-child(odd) {
+    background-color: #c2c2c2;
 }
 
 .lista-clube {
