@@ -7,7 +7,7 @@ const clubes = [] // INCREMENTADOR DE CLUBES
 frm.addEventListener('submit', (event) => {
     event.preventDefault()
 
-    if (clubes.length % 2 === 0) {
+    if (clubes.length % 2 === 0 && clubes.length >= 2) {
         const table = document.createElement('table')
 
         // RECEBE O length DO ARRAY DE MODO ANTECIPADO PARA Q O MESMO NÃO SEJA MODIFICADO AO LONGO DO LOOP
@@ -33,21 +33,33 @@ frm.addEventListener('submit', (event) => {
 
         tabela.innerHTML += '<h2>Tabela de Jogos</h2>'
         tabela.appendChild(table)
+    } else if (clubes.length < 2) {
+        alert('Necessário mais de dois clubes')
+        frm.inClube.focus()
+    } else if(clubes.length % 2 != 0) {
+        alert('Impossível gerar a tabela com um número ímpar de clubes')
+        frm.inClube.focus()
     }
 })
 
 addClube.addEventListener('click', () => {
     const clube = frm.inClube.value
 
-    listaClube.innerHTML += `<h5 class='clubes'>${clube}</h5>`
-    clubes.push(clube)
-    frm.inClube.focus()
-    frm.inClube.value = ''
+    if (clube != '') {
+        listaClube.innerHTML += `<h5 class='clubes'>${clube}</h5>`
+        clubes.push(clube)
+        frm.inClube.focus()
+        frm.inClube.value = ''
+    } else {
+        alert('Digite algo')
+    }
+    
 })
 
 frm.addEventListener('reset', () => {
     tabela.innerHTML = ''
     listaClube.innerHTML = ''
+    frm.inClube.focus()
 })
 
 /*

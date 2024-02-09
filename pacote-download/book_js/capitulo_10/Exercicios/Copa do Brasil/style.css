@@ -60,6 +60,7 @@ span {
     width: 100%;
     height: 100%;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     gap: 5px;
 }
@@ -70,7 +71,7 @@ span {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
+    width: 300px;
     height: 100%;
     padding: 8px;
     border-radius: 5px;
@@ -98,10 +99,24 @@ tr:nth-child(odd) {
     align-items: flex-end;
     flex-direction: column;
     gap: 10px;
-    width: 60%;
-    height: 100%;
+    width: 150px;
+    height: 200px;
     padding: 8px;
     border-radius: 5px;
     background-color: white;
     color: black;
+    overflow: hidden;
+    overflow-y: scroll;
 }
+
+.lista-clube::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 0 5px 5px 0;
+    background-color: #fff;
+}
+
+.lista-clube::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 20px;
+}
+
