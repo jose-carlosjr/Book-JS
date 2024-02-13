@@ -1,6 +1,6 @@
 const container = document.querySelector('.container')
 const frm = document.querySelector('.form')
-let deleteDivRes = document.querySelector('.res')
+const deleteDivRes = document.querySelector('.res')
 
 window.addEventListener('load', () => {
     frm.inIdade.focus()
@@ -11,9 +11,9 @@ frm.addEventListener('submit', (event) => {
     event.preventDefault()
 
     if (deleteDivRes) {
-        deleteDivRes.remove()
+        deleteDivRes.innerHTML = ''
     }
-
+    
     const idade = frm.inIdade.value
 
     const div = document.createElement('div')
@@ -30,6 +30,10 @@ frm.addEventListener('submit', (event) => {
     if (idade > 120) {
         alert(`Impossível sua idade ser ${idade}`)
     }
+})
+
+frm.addEventListener('reset', () => {
+    deleteDivRes.innerHTML = ''
 })
 
 /*
