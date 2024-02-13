@@ -2,6 +2,11 @@ const container = document.querySelector('.container')
 const frm = document.querySelector('.form')
 let deleteDivRes = document.querySelector('.res')
 
+window.addEventListener('load', () => {
+    frm.inIdade.focus()
+})
+
+
 frm.addEventListener('submit', (event) => {
     event.preventDefault()
 

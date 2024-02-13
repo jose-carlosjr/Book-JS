@@ -70,4 +70,5 @@ span {
     padding: 10px;
     border-radius: 5px;
     margin-top: 2%;
+    cursor: pointer;
 }
